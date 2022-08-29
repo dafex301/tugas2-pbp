@@ -23,3 +23,13 @@ function calculateScore($answers, $questions) {
   // Return the percentage
   return $percentage;
 }
+
+// Function to get the question from ID url
+function getQuestion($id, $questions) {
+  // If there is no question with the ID, then return false
+  if (!isset($questions[$id])) {
+    return false;
+  }
+  // Return the question
+  return $questions[$id];
+}

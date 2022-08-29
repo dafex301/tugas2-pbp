@@ -14,7 +14,15 @@ require_once 'functions.php';
 </head>
 <body>
   <div class="m-12">
-    <h1 class="text-3xl">Soal</h1>
+    <h1 class="text-3xl">List Soal</h1>
+    <ul class="list-disc">
+      <?php foreach ($questions as $key => $question): ?>
+        <li>
+          <a href="question.php?id=<?= $key ?>">
+            <?= $key ?>
+          </a>
+        </li>
+      <?php endforeach ?>
   </div>
 </body>
 </html>

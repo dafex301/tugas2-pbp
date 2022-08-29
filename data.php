@@ -17,16 +17,16 @@ $questions = [
     'question' => 'Siapa raja bajak laut?', 
     'options' => 
     [
-      'a' => 'Roger', 
-      'b' => 'Sasuke', 
-      'c' => 'Luffy', 
-      'd' => 'Ichigo', 
-      'e' => 'Jokowi'
+      'a' => 'Prabowo', 
+      'b' => 'Subianto', 
+      'c' => 'Fiqih', 
+      'd' => 'Kaesang', 
+      'e' => 'Gibran'
     ],
     'answer' => 'a'
   ],
   3 => [
-    'question' => 'Siapa raja bajak laut?', 
+    'question' => 'Siapa presiden zimbabwe?', 
     'options' => 
     [
       'a' => 'Roger', 
