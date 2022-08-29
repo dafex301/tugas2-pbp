@@ -33,3 +33,9 @@ function getQuestion($id, $questions) {
   // Return the question
   return $questions[$id];
 }
+
+// Function to reset session
+function resetSession() {
+  // Unset the answers session
+  unset($_SESSION['answers']);
+}

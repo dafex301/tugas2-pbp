@@ -1,6 +1,5 @@
 <?php
-  require_once 'data.php';
-  require_once 'functions.php';
+  require_once 'init.php';
 
   // Get the question from the id
   $question = getQuestion($_GET['id'], $questions);
@@ -8,6 +7,11 @@
   if (!$question) {
     header('Location: index.php');
     exit;
+  }
+
+  // Save the answer value in the $_SESSION
+  if (isset($_POST['answer'])) {
+    $_SESSION['answers'][$_GET['id']] = $_POST['answer'];
   }
 ?>
 
@@ -33,14 +37,23 @@
     <p class="text-xl">
       <?= $question['question'] ?>
     </p>
-    <ul class="list-disc">
-      <?php foreach ($question['options'] as $key => $option): ?>
-        <input type='radio' name='answer' value='<?= $key ?>'>
-          <?= $option ?>
-        </input>
-        <br/>
-      <?php endforeach ?>
-    </ul>
+    <!-- Form Post Answer -->
+        <form action="" method="post">
+        <?php foreach ($question['options'] as $key => $option): ?>
+          <!-- Input when clicked, save the answer on session -->
+          <input type="radio" name="answer" value="<?= $key ?>" id="<?= $key ?>"
+            <?php if (isset($_SESSION['answers'][$_GET['id']]) && $_SESSION['answers'][$_GET['id']] == $key): ?>
+              checked
+            <?php endif ?>
+            onchange="this.form.submit()"
+          >
+          <label for="<?= $key ?>">
+            <?= $option ?>
+          </label>
+          <br/>
+        <?php endforeach ?>
+          </form>
+      
 
     <!-- Previous and Forward Question -->
     <div class="flex justify-between">

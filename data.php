@@ -7,17 +7,17 @@ $questions = [
     [
       'a' => 'Naruto', 
       'b' => 'Sasuke', 
-      'c' => 'Luffy', 
+      'c' => 'Hashirama', 
       'd' => 'Ichigo', 
       'e' => 'Jokowi'
     ],
-    'answer' => 'e'
+    'answer' => 'c'
   ],
   2 => [
     'question' => 'Siapa raja bajak laut?', 
     'options' => 
     [
-      'a' => 'Prabowo', 
+      'a' => 'Roger', 
       'b' => 'Subianto', 
       'c' => 'Fiqih', 
       'd' => 'Kaesang', 
@@ -31,16 +31,10 @@ $questions = [
     [
       'a' => 'Roger', 
       'b' => 'Sasuke', 
-      'c' => 'Luffy', 
+      'c' => 'Fiqih', 
       'd' => 'Ichigo', 
       'e' => 'Jokowi'
     ],
-    'answer' => 'a'
+    'answer' => 'c'
   ],
 ];
-
-$answers = [
-  1 => 'e',
-  2 => 'a'
-];
-

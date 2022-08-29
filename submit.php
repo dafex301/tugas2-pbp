@@ -1,3 +1,12 @@
+<?php
+  require_once 'init.php';
+  // Get the all the answers from the session
+  $answers = isset($_SESSION['answers']) ? $_SESSION['answers'] : [];
+
+  // Calculate the score
+  $score = calculateScore($answers, $questions);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +17,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Submit</h1>
+  <div class="m-12 mx-64">
+    <h1>Submit Page</h1>
+    <p>Score : <?= $score ?></p>
+    
+    <!-- Back to index -->
+    <a href="index.php" class="text-2xl text-blue-500" 
+    onclick="<?php resetSession() ?>">
+      Back to Home
+    </a>
+  </div>
 </body>
 </html>
