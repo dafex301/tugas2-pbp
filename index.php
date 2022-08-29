@@ -13,7 +13,7 @@ require_once 'functions.php';
   <title>Document</title>
 </head>
 <body>
-  <div class="m-12">
+  <div class="m-12 mx-64">
     <h1 class="text-3xl">List Soal</h1>
     <ul class="list-disc">
       <?php foreach ($questions as $key => $question): ?>

@@ -23,7 +23,7 @@
 </head>
 <body>
   <!-- Question -->
-  <div class="m-12">
+  <div class="my-12 mx-64">
     <!-- Back button to index -->
     <a href="index.php" class="text-2xl text-blue-500">
       &#8592;
@@ -54,6 +54,11 @@
       <?php if ($_GET['id'] < count($questions)): ?>
         <a href="question.php?id=<?= $_GET['id'] + 1 ?>" class="text-xl">
           Next
+        </a>
+      <!-- If end of the question, go to submit page -->
+      <?php else : ?>
+        <a onclick="return confirm('Are you sure to submit?')" href="submit.php" class="text-xl">
+          Submit
         </a>
       <?php endif ?>
     </div>
