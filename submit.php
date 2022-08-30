@@ -1,14 +1,22 @@
 <?php
-  require_once 'init.php';
-  // Get the all the answers from the session
-  $answers = isset($_SESSION['answers']) ? $_SESSION['answers'] : [];
+require_once 'init.php';
 
-  // Calculate the score
-  $score = calculateScore($answers, $questions);
+// jika user belum login, maka redirect ke halaman login
+if (!isset($_SESSION['username'])) {
+  header("Location: login.php");
+}
+
+
+// Get the all the answers from the session
+$answers = isset($_SESSION['answers']) ? $_SESSION['answers'] : [];
+
+// Calculate the score
+$score = calculateScore($answers, $questions);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,16 +24,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Document</title>
 </head>
+
 <body>
   <div class="m-12 mx-64">
     <h1>Submit Page</h1>
     <p>Score : <?= $score ?></p>
-    
+
     <!-- Back to index -->
-    <a href="index.php" class="text-2xl text-blue-500" 
-    onclick="<?php resetSession() ?>">
+    <a href="index.php" class="text-2xl text-blue-500" onclick="<?php resetSession() ?>">
       Back to Home
     </a>
   </div>
 </body>
+
 </html>
