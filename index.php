@@ -6,7 +6,6 @@ if (!isset($_SESSION['username'])) {
   header("Location: login.php");
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -17,15 +16,14 @@ if (!isset($_SESSION['username'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Document</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <title>Home</title>
 </head>
 
-<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
-  <!-- AlpineJS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
-
+<body>
   <!-- Slider Component Container -->
-  <div class="flex flex-col items-center justify-center mt-32" x-cloak x-data="appData()" x-init="appInit()">
+  <div class="flex flex-col items-center justify-center">
     <div class="flex flex-col">
 
       <!-- Navbar -->
@@ -70,23 +68,42 @@ if (!isset($_SESSION['username'])) {
             <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
               <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
             </svg>
-
             Logout
           </a>
         </div>
       </nav>
+      <div class="hero">
+        <a class="start-quiz" href="javascript:delay('question.php?id=1')">Start Quiz</a>
+        <script type="text/javascript">
+            const buttons = document.querySelectorAll('a');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e){
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
 
-      <div class="m-12 mx-64">
-        <h3 class="text-3xl">List Soal</h3>
-        <ul class="list-disc">
-          <?php foreach ($questions as $key => $question) : ?>
-            <li>
-              <a href="question.php?id=<?= $key ?>">
-                <?= $key ?>
-              </a>
-            </li>
-          <?php endforeach ?>
-      </div>
+                    let ripples = document.createElement('span');
+                    ripples.style.left = x + 'px';
+                    ripples.style.top = y + 'px';
+                    this.appendChild(ripples);
+
+                    setTimeout(() => {
+                        ripples.remove()
+                    }, 1000);
+                })
+            })
+        </script>
+    </div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var btnText = document.getElementById("btnText");
+
+        btn.onclick = function(){
+            btnText.innerHTML = "Goodluck"
+            btn.classList.add("active");
+            btn.classList.add("text-white")
+        }
+    </script>
     </div>
 </body>
 

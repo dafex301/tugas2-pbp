@@ -1,6 +1,6 @@
 <?php
 // variable pendefinisian kredensial
-$usernamelogin = 'nakama';
+$usernamelogin = 'Ace';
 $passwordlogin = 'rahasia';
 
 // memulai session

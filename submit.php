@@ -37,8 +37,9 @@ $score = calculateScore($answers, $questions);
     </div>
   
       <!-- Back to index -->
-      <a href="index.php" class="mt-5 text-xl text-center block text-white no-underline" 
-      onclick="">
+      <a href="back-submit.php" 
+      class="mt-5 text-xl text-center block text-white no-underline hover:scale-105 transition-all duration-200 ease-in-out">
+        &#8592;
         Back to Home
       </a>
 
@@ -64,8 +65,6 @@ $score = calculateScore($answers, $questions);
               progressValue.textContent = `${progressStartValue}%`
               circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
           }
-
-          
     }, speed);
   </script>
 </body>
