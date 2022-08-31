@@ -36,6 +36,14 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 
+## Screenshots
+
+![A](https://i.postimg.cc/ncvjgBd0/Whats-App-Image-2022-08-31-at-23-45-47.jpg)
+![B](https://i.postimg.cc/qqpVRfTt/Whats-App-Image-2022-08-31-at-23-45-57.jpg)
+![C](https://i.postimg.cc/1X3C2ySK/Whats-App-Image-2022-08-31-at-23-46-22.jpg)
+![D](https://i.postimg.cc/wMNVSMPL/Whats-App-Image-2022-08-31-at-23-46-32.jpg)
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
