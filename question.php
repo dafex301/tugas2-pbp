@@ -28,7 +28,7 @@ if (isset($_POST['answer'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="/js/timer.js"></script>
   <title>Question</title>
 </head>
 
@@ -41,6 +41,11 @@ if (isset($_POST['answer'])) {
     </a>
 
     <h1 class="text-3xl">Question</h1>
+    <h4 class="flex justify-end" id="timer">
+      <!-- <script>
+        var timeLeft = 20;
+      </script> -->
+    </h4>
     <p class="text-xl">
       <?= $question['question'] ?>
     </p>

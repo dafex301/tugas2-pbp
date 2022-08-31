@@ -1,5 +1,5 @@
 <?php
-require_once 'data.php';
-require_once 'functions.php';
+require_once './config/data.php';
+require_once './config/functions.php';
 
 session_start();
