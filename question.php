@@ -32,10 +32,12 @@
   <body class="antialiased text-gray-700 bg-purple-600">
     <div class="flex w-full h-screen" id="app">
       <div class="item w-1/3 text-center">
-        <i
-          class="fa-solid fa-circle-left text-3xl text-white mt-10"
-          style="cursor: pointer"
-        ></i>
+        <a href="index.php">
+          <i
+            class="fa-solid fa-circle-left text-3xl text-white mt-10"
+            style="cursor: pointer"
+          ></i>
+        </a>
         <div class="flex justify-center ml-10">
           <div class="bg-white rounded-lg shadow-lg w-2/3 mt-14">
             <p class="text-2xl px-2 pt-2">Nomor Soal</p>
