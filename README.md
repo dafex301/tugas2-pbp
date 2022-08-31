@@ -16,7 +16,7 @@ Repository ini dibuat untuk memenuhi tugas PBP dengan topik PHP Quiz.
 
 - [@dafex301](https://github.com/dafex301)
 - [@ryhn7](https://github.com/ryhn7)
-- [@Rifaaanf](https://github.com/Rifaaanf)
+- [@rifaaanf](https://github.com/Rifaaanf)
 - [@hananzain](https://github.com/hananzain)
 - Muhammad Fiqih Ikhsan
 
