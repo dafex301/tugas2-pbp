@@ -36,7 +36,7 @@ if (!isset($_SESSION['username'])) {
           <!-- Logo -->
           <a class="cursor-pointer">
             <h3 class="text-2xl font-medium text-blue-500">
-              <img class="object-cover h-12" src="/assets/logo.png" alt="Store Logo">
+              <img class="object-cover h-12" src="./assets/logo.png" alt="Store Logo">
             </h3>
           </a>
         </div>

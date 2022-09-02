@@ -30,7 +30,7 @@ if (isset($_POST['answer'])) {
   <title>Question</title>
   <script src="https://kit.fontawesome.com/4569be348d.js" crossorigin="anonymous"></script>
   <script defer src="js/question.js"></script>
-  <script src="/js/timer.js"></script>
+  <script src="js/timer.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -41,8 +41,8 @@ if (isset($_POST['answer'])) {
         <i class="fa-solid fa-circle-left text-3xl text-white mt-10" style="cursor: pointer"></i>
       </a>
       <div class="flex justify-center ml-10">
-        <div class="bg-transparent rounded-lg shadow-xl w-1/3 mt-5 text-white">
-          <span class="countdown font-mono text-2xl" id="timer">
+        <div class="bg-white rounded-lg shadow-xl w-1/3 mt-5 text-white">
+          <span class="countdown font-mono text-gray-800 text-2xl" id="timer">
           </span>
         </div>
       </div>
@@ -60,7 +60,9 @@ if (isset($_POST['answer'])) {
             <?php endforeach ?>
           </div>
           <div>
-            <a href="submit.php" class="text-center rounded-full bg-green-400 border border-1 border-purple-500 m-2 px-20 font-semibold cursor-pointer my-4 block">
+            <a
+            onclick="return confirm('Are you sure to submit the answer?')"
+            href="submit.php" class="text-center rounded-full bg-green-400 border border-1 border-purple-500 m-2 px-20 font-semibold cursor-pointer my-4 block">
               Submit Jawaban
             </a>
           </div>
