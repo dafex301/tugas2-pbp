@@ -61,7 +61,7 @@ if (isset($_POST['answer'])) {
           </div>
           <div>
             <a
-            onclick="return confirm('Are you sure to submit the answer?')"
+            onclick="return confirm('Apakah anda yakin untuk menyelesaikan quiz?')"
             href="submit.php" class="text-center rounded-full bg-green-400 border border-1 border-purple-500 m-2 px-20 font-semibold cursor-pointer my-4 block">
               Submit Jawaban
             </a>
