@@ -29,8 +29,6 @@ if (isset($_POST['answer'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Question</title>
   <script src="https://kit.fontawesome.com/4569be348d.js" crossorigin="anonymous"></script>
-  <script defer src="js/question.js"></script>
-  <script src="js/timer.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -130,6 +128,9 @@ if (isset($_POST['answer'])) {
       </div>
     </div>
   </div>
+
+  <script defer src="./js/question.js"></script>
+  <script src="./js/timer.js"></script>
 </body>
 
 </html>

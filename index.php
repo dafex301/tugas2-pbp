@@ -16,7 +16,6 @@ if (!isset($_SESSION['username'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <title>Home</title>
 </head>
@@ -74,37 +73,40 @@ if (!isset($_SESSION['username'])) {
       </nav>
       <div class="hero">
         <a class="start-quiz" href="javascript:delay('question.php?id=1')">Start Quiz</a>
-        <script type="text/javascript">
-            const buttons = document.querySelectorAll('a');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', function(e){
-                    let x = e.clientX - e.target.offsetLeft;
-                    let y = e.clientY - e.target.offsetTop;
-
-                    let ripples = document.createElement('span');
-                    ripples.style.left = x + 'px';
-                    ripples.style.top = y + 'px';
-                    this.appendChild(ripples);
-
-                    setTimeout(() => {
-                        ripples.remove()
-                    }, 1000);
-                })
-            })
-        </script>
+      </div>
     </div>
 
-    <script>
-        var btn = document.getElementById("btn");
-        var btnText = document.getElementById("btnText");
+    
+    <script src="./js/script.js"></script>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll('a');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
 
-        btn.onclick = function(){
-            btnText.innerHTML = "Goodluck"
-            btn.classList.add("active");
-            btn.classList.add("text-white")
-        }
+          let ripples = document.createElement('span');
+          ripples.style.left = x + 'px';
+          ripples.style.top = y + 'px';
+          this.appendChild(ripples);
+
+          setTimeout(() => {
+            ripples.remove()
+          }, 1000);
+        })
+      })
     </script>
-    </div>
+    <script>
+      var btn = document.getElementById("btn");
+      var btnText = document.getElementById("btnText");
+
+      btn.onclick = function() {
+        btnText.innerHTML = "Goodluck"
+        btn.classList.add("active");
+        btn.classList.add("text-white")
+      }
+    </script>
+
 </body>
 
 

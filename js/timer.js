@@ -1,8 +1,8 @@
-if (localStorage.getItem('timeLeft')) {
-    var timeLeft = localStorage.getItem('timeLeft');
+if (sessionStorage.getItem('timeLeft')) {
+    var timeLeft = sessionStorage.getItem('timeLeft');
 }
 else {
-    var timeLeft = 10 * 60;
+    var timeLeft = 5 * 60;
 }
 
 function timeout() {
@@ -14,12 +14,12 @@ function timeout() {
     var timeString = minute + ":" + second;
     document.getElementById("timer").innerHTML = timeString;
     if (timeLeft <= 0) {
-        localStorage.clear('timeLeft');
+        sessionStorage.clear('timeLeft');
         alert('Waktu Habis');
         window.location.href = "submit.php";
     } else {
         timeLeft--;
-        localStorage.setItem('timeLeft', timeLeft);
+        sessionStorage.setItem('timeLeft', timeLeft);
         setTimeout("timeout()", 1000);
     }
 }

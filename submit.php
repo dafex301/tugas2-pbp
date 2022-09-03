@@ -30,18 +30,17 @@ $score = calculateScore($answers, $questions);
     <div class="luar">
       <span class="text"><?= $_SESSION['username'] ?></span>
       <div class="circular-progress">
-          <span class="progress-value">0%</span>
+        <span class="progress-value">0%</span>
       </div>
       <span class="text">This Is Your Score</span>
-  
+
     </div>
-  
-      <!-- Back to index -->
-      <a href="back-submit.php" 
-      class="mt-5 text-xl text-center block text-white no-underline hover:scale-105 transition-all duration-200 ease-in-out">
-        &#8592;
-        Back to Home
-      </a>
+
+    <!-- Back to index -->
+    <a href="back-submit.php" class="mt-5 text-xl text-center block text-white no-underline hover:scale-105 transition-all duration-200 ease-in-out">
+      &#8592;
+      Back to Home
+    </a>
 
   </div>
 
@@ -51,21 +50,24 @@ $score = calculateScore($answers, $questions);
 
     // do the magic
     let circularProgress = document.querySelector(".circular-progress"),
-    progressValue = document.querySelector(".progress-value");
+      progressValue = document.querySelector(".progress-value");
 
     let progressStartValue = 0,
-        progressEndValue = parseInt(nilai),
-        speed = 50;
-        let progress = setInterval(() => {
+      progressEndValue = parseInt(nilai),
+      speed = 50;
+    let progress = setInterval(() => {
 
-          if (progressStartValue == progressEndValue){
-              clearInterval(progress);
-          } else {
-              progressStartValue++;
-              progressValue.textContent = `${progressStartValue}%`
-              circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
-          }
+      if (progressStartValue == progressEndValue) {
+        clearInterval(progress);
+      } else {
+        progressStartValue++;
+        progressValue.textContent = `${progressStartValue}%`
+        circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+      }
     }, speed);
+
+    // clear timer
+    window.onload = sessionStorage.clear();
   </script>
 </body>
 
